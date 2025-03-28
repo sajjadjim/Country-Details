@@ -15,7 +15,7 @@ function App() {
   return (
     <>
 
-<Suspense fallback={<h2>Loading Data File ......</h2>}>
+<Suspense fallback={<h2 className='text-center text-4xl mt-40'>Loading Data File  <span><span className="loading loading-spinner loading-xl"></span></span></h2>}>
   <Countries AllCountries={AllCountries}></Countries>
 </Suspense>
 
