@@ -1,6 +1,6 @@
 // # Steps we can use the Data Store in Local File 
 const getFromLocalStorage = () =>{
-    const storedString =localStorage.getItem('country_name')
+    const storedString =localStorage.getItem('unique_id')
 
     if(storedString){
         const storedCountryName = JSON.parse(storedString)
@@ -9,14 +9,14 @@ const getFromLocalStorage = () =>{
     return []
 }
 
-const saveCountryNameLocalStorage = (country_name) =>{
-const countryNameStringConverted = JSON.stringify(country_name)
-localStorage.setItem(country_name,countryNameStringConverted)
+const saveCountryNameLocalStorage = (unique_id) =>{
+const countryNameStringConverted = JSON.stringify(unique_id)
+localStorage.setItem(unique_id,countryNameStringConverted)
 }
 
 const addCountryNameLocalStorage = (cca3) =>{
-    const country_name = getFromLocalStorage()
-    const newCountryName = [...country_name , cca3]
+    const unique_id = getFromLocalStorage()
+    const newCountryName = [...unique_id , cca3]
     saveCountryNameLocalStorage(newCountryName)
 }
 export {addCountryNameLocalStorage as addCountry , getFromLocalStorage as getCountry}

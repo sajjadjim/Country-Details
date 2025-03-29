@@ -7,6 +7,7 @@ const [visit,setVisited] = useState(false)
 const handleButton = () =>{
 setVisited(!visit)
 handleVisited(country)
+handleVisitedFlags(country.flags.png)
 }
 
 //AS A Check Marked Code here
@@ -26,7 +27,7 @@ handleVisited(country)
             <button className={`${visit && 'button-color'}`} onClick={handleButton}>
                 { visit?'Visited' : 'Not Visited'}
                 </button>
-            <button onClick={()=>  handleVisitedFlags(country.flags.png)}>Done ✅</button>
+            {/* <button onClick={()=>  handleVisitedFlags(country.flags.png)}>Done ✅</button> */}
             {/* <button onClick={CheckMarkedButton}>{marked ? 'Check Mark' : "Not Check"}</button> */}
         </div>
     );
